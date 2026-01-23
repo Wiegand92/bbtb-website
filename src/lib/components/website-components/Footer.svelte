@@ -2,27 +2,12 @@
     import instagramIcon from '$lib/assets/images/icons/instagram-1.webp';
     import facebookIcon from '$lib/assets/images/icons/facebook-1.webp';
 </script>
-<div class="container flex w-full p-8 lg:flex-row lg:justify-around flex-col gap-8">
+<div class="container flex min-w-full p-8 lg:flex-row justify-around flex-col gap-8">
     <div class="content contact">
         <h4>Contact Us</h4>
         <a href="mailto:buildingbondsthroughbooks@gmail.com" class='hover:text-(--bbtb-pink) transition-colors duration-300 ease-in-out'>
             buildingbondsthroughbooks@gmail.com
         </a>
-        <div class="flex justify-center gap-4 mt-4">
-            <a href="https://www.instagram.com/buildingbondsthroughbooks/"><img src={instagramIcon} alt="Instagram"></a>
-            <a href="https://www.facebook.com/buildingbondsthroughbooks"><img src={facebookIcon} alt="Facebook"></a>
-        </div>
-    </div>
-    
-    <div class="content donate display-none lg:block">
-        <h4>Support Us</h4>
-        <div>
-        <div id="give-lively-widget" class="gl-simple-donation-widget"></div>
-        </div>
-    </div>
-    
-    <div class="content write">
-        <h4>Write to Us</h4>
         <p>
             Building Bonds Through Books
             <br/>
@@ -30,9 +15,28 @@
             <br/>
             Arlington, VA 22202
         </p>
+        
+        <div class="flex justify-center gap-4 mt-4">
+            <a href="https://www.instagram.com/buildingbondsthroughbooks/"><img src={instagramIcon} alt="Instagram"></a>
+            <a href="https://www.facebook.com/buildingbondsthroughbooks"><img src={facebookIcon} alt="Facebook"></a>
+        </div>
+    </div>
+
+    <div class="content donate">
+        <h4>Support Us</h4>
+        <div>
+        <div id="give-lively-widget" class="gl-simple-donation-widget"></div>
+        </div>
+    </div>
+    
+    <div class="content write">
+        <h4>About Us</h4>
+        <p>
+            Building Bonds Through Books is a 501(c)(3) nonprofit organization that aims to reduce the invisibility of children of incarcerated parents and their families by expanding voluntary identification and support. We hope to enhance children’s coping skills and promote understanding about parental incarceration through children’s books and bibliotherapy.
+        </p>
     </div>
 </div>
-<p class="footer-note">Building Bonds Through Books is a 501(c)(3) nonprofit organization</p>
+<p class="footer-note">2026</p>
 
 <style lang='postcss'>
     h4{

@@ -6,7 +6,6 @@
     }[];
     export let pdf: boolean;
     const buttonStyle = "bg-(--bbtb-foreground) text-(--bbtb-background) text-lg p-6 rounded-lg hover:bg-(--bbtb-pink) hover:text-(--bbtb-foreground) transition-colors duration-300 ease-in-out";
-    console.log(pdf)
 </script>
 
 <div class='flex flex-col px-4 justify-center items-center'>

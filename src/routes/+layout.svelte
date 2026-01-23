@@ -4,8 +4,6 @@
 	import NavBar from '$lib/components/website-components/NavBar.svelte';
 	import Footer from '$lib/components/website-components/Footer.svelte';
 
-	export const prerender = true;
-
 	let { children } = $props();
 </script>
 

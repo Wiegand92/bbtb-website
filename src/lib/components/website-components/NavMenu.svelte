@@ -8,6 +8,11 @@
   const menuItemStyle = "text-(--bbtb-foreground)"
   const menuStyle = "flex flex-col justify-center top-10 bg-(--bbtb-background) p-4 shadow-lg rounded-md z-10";
   const mobileMenuStyle = "bg-(--bbtb-background) p-4 shadow-lg rounded-md";
+  // State for Drawer (Mobile Menu)
+  let open = $state(false)
+  function handleOpenChange() {
+    open = !open;
+  }
 </script>
 
 <NavigationMenu.Root>
@@ -77,7 +82,7 @@
   </NavigationMenu.List>
 
   <!-- Mobile Drawer View -->
-  <Drawer.Root>
+  <Drawer.Root bind:open>
     <Drawer.Trigger class="lg:hidden w-full h-10 bg-(--bbtb-foreground) text-(--bbtb-background)">Menu</Drawer.Trigger>
     <Drawer.Content class='bg-(--bbtb-foreground) text-(--bbtb-background)'>
       <Drawer.Header>
@@ -87,7 +92,7 @@
     
     <!-- Home (Direct Link) -->
         <NavigationMenu.Item>
-          <NavigationMenu.Link href={resolve("/")} class={navItemStyle}>
+          <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/")} class={navItemStyle}>
             Home
           </NavigationMenu.Link>
         </NavigationMenu.Item>
@@ -98,8 +103,8 @@
             About
           </NavigationMenu.Trigger>
           <NavigationMenu.Content class={mobileMenuStyle}>
-            <NavigationMenu.Link href={resolve("/about/mission")} class={menuItemStyle}>Mission</NavigationMenu.Link>
-            <NavigationMenu.Link href={resolve("/about/team")} class={menuItemStyle}>Team</NavigationMenu.Link>
+            <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/about/mission")} class={menuItemStyle}>Mission</NavigationMenu.Link>
+            <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/about/team")} class={menuItemStyle}>Team</NavigationMenu.Link>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
 
@@ -109,9 +114,9 @@
             Request Books
           </NavigationMenu.Trigger>
           <NavigationMenu.Content class={mobileMenuStyle}>
-            <NavigationMenu.Link href="https://docs.google.com/forms/d/e/1FAIpQLSex7ofV5lnFsOv8iaiE3gnFHlf3VlCpBAWfHtzSpVJ35lUb3g/viewform?usp=header" target="_blank" class={menuItemStyle}>Request Books</NavigationMenu.Link>
-            <NavigationMenu.Link href={resolve("/about/books")} class={menuItemStyle}>Our Books</NavigationMenu.Link>
-            <!-- <NavigationMenu.Link href={resolve("/about/books")} class={menuItemStyle}>FAQ</NavigationMenu.Link> -->
+            <NavigationMenu.Link onclick={handleOpenChange} href="https://docs.google.com/forms/d/e/1FAIpQLSex7ofV5lnFsOv8iaiE3gnFHlf3VlCpBAWfHtzSpVJ35lUb3g/viewform?usp=header" target="_blank" class={menuItemStyle}>Request Books</NavigationMenu.Link>
+            <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/about/books")} class={menuItemStyle}>Our Books</NavigationMenu.Link>
+            <!-- <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/about/books")} class={menuItemStyle}>FAQ</NavigationMenu.Link> -->
           </NavigationMenu.Content>
         </NavigationMenu.Item>
 
@@ -121,15 +126,15 @@
             Resources
           </NavigationMenu.Trigger>
           <NavigationMenu.Content class={mobileMenuStyle}>
-            <NavigationMenu.Link href={resolve("/resources/how-to")} class={menuItemStyle}>How to Guides</NavigationMenu.Link>
-            <NavigationMenu.Link href={resolve("/resources/state-coip")} class={menuItemStyle}>State Resources for Children</NavigationMenu.Link>
-            <NavigationMenu.Link href={resolve("/resources/national-coip")} class={menuItemStyle}>National Resources for Children</NavigationMenu.Link>
+            <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/resources/how-to")} class={menuItemStyle}>How to Guides</NavigationMenu.Link>
+            <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/resources/state-coip")} class={menuItemStyle}>State Resources for Children</NavigationMenu.Link>
+            <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/resources/national-coip")} class={menuItemStyle}>National Resources for Children</NavigationMenu.Link>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
 
         <!-- Contact Us (Direct Link) -->
         <NavigationMenu.Item>
-          <NavigationMenu.Link href={resolve("/contact")} class={navItemStyle}>
+          <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/contact")} class={navItemStyle}>
             Contact Us
           </NavigationMenu.Link>
         </NavigationMenu.Item>
@@ -141,8 +146,8 @@
             Donate
           </NavigationMenu.Trigger>
           <NavigationMenu.Content class={mobileMenuStyle}>
-            <NavigationMenu.Link href="https://secure.givelively.org/donate/building-bonds-through-books" target="_blank" class={menuItemStyle}>Donate Online</NavigationMenu.Link>
-            <NavigationMenu.Link href={resolve("/amazon-wishlist")} class={menuItemStyle}>Amazon Wishlist</NavigationMenu.Link>
+            <NavigationMenu.Link onclick={handleOpenChange} href="https://secure.givelively.org/donate/building-bonds-through-books" target="_blank" class={menuItemStyle}>Donate Online</NavigationMenu.Link>
+            <NavigationMenu.Link onclick={handleOpenChange} href={resolve("/amazon-wishlist")} class={menuItemStyle}>Amazon Wishlist</NavigationMenu.Link>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
       </NavigationMenu.List>

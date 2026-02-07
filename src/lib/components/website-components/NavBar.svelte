@@ -1,6 +1,5 @@
 <script lang="ts">
     import MenuRenderer from "./MenuRenderer.svelte";
-    import NavMenu from "./NavMenu.svelte";
     import websiteLogo from '$lib/assets/images/websiteLogo.svg';
 </script>
 

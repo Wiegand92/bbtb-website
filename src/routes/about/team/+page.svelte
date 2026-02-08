@@ -72,7 +72,7 @@ const teamMembers : { name: string; image: string; bio: string }[] = [
 
     @media (min-width: 1024px) {
         .team-member:nth-of-type(even) {
-        flex-direction: row-reverse;
+          flex-direction: row-reverse;
         } 
 
         .team-member-image {

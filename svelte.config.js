@@ -1,7 +1,10 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-// const prod = process.env.NODE_ENV === 'production'
+const prod = process.env.NODE_ENV === 'production'
+const getBasePath = () => {
+	return prod ? "" : '/bbtb-website';
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -15,8 +18,11 @@ const config = {
       		fallback: 'index.html' // Serves index.html for unprerendered routes
 		}), 
 		paths: {
-			base: '',
+			base: getBasePath(),
 			relative: false
+		},
+		prerender: {
+			handleHttpError: 'warn'
 		}
 	}
 };

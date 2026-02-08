@@ -15,12 +15,12 @@
             <a href={resource.file} target="_blank" class="">
                 <h2 class="text-2xl text-(--bbtb-foreground) font-semibold mb-2 hover:text-(--bbtb-pink) hover:bg-(--bbtb-secondary-background) transition-colors duration-300 ease-in-out">{resource.title}</h2>
             </a>
-            <Button href={resource.file} download class={buttonStyle}>Download PDF</Button>
+            <Button href={resource.file} download={resource.title} class={buttonStyle}>Download PDF</Button>
         </div>
     {:else}
         <div class="resource-item mb-6 items-center text-center">
             <h2 class="text-2xl text-(--bbtb-foreground) font-semibold mb-2">{resource.title}</h2>
-            <Button href={resource.file} download class={buttonStyle}>Download Resource</Button>
+            <Button href={resource.file} download={resource.title} class={buttonStyle}>Download Resource</Button>
         </div>
     {/if}
 {/each}

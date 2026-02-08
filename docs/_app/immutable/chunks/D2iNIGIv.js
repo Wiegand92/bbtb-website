@@ -1,1 +1,0 @@
-import{b6 as c,F as e,h as i,b7 as a}from"./unOu-iv6.js";function _(n){n&&c(n[e]??"a component",n.name)}function d(){const n=i?.function;function o(t){a(t,n[e])}return{$destroy:()=>o("$destroy()"),$on:()=>o("$on(...)"),$set:()=>o("$set(...)")}}const s="5";typeof window<"u"&&((window.__svelte??={}).v??=new Set).add(s);export{_ as c,d as l};
